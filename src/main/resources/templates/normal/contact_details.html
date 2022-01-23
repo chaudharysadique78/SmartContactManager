@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<section>
+		<div class="card mr-3 ml-2" th:if="${contact}">
+			<div class="card-body">
+				<div class="container text-center">
+
+					<img style="height: 150px; width: 150px;" class="my_profile_img"
+						th:src="@{'/img/'+${contact.imageUrl}}" alt="" />
+					<h1 th:text="${contact.name}"></h1>
+					<h2 th:text="${'('+contact.secondName+')'}"></h2>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#ID</th>
+									<th scope="col">SCM<span th:text="${contact.cid}"></span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Email</th>
+									<td><span th:text="${contact.email}"></span></td>
+								</tr>
+
+								<tr>
+									<th scope="row">Work</th>
+									<td><span th:text="${contact.work}"></span></td>
+								</tr>
+								<tr>
+									<th scope="row">Phone</th>
+									<td><span th:text="${contact.phone}"></span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="description mt-4">
+						<th:block th:utext="${contact.discription}"></th:block>
+					</div>
+
+					<div class="container mt-3">
+						<button th:onclick="|deleteContact(${contact.cid})|"
+							class="btn btn-danger btn-block">Delete</button>
+						<a th:href="@{'/user/update/'+${contact.cid}}"
+							class="btn btn-primary text-white btn-block">Update</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- to show error when try to see other user contact  -->
+		<div th:unless="${contact}"
+			class="text-center bg-danger text-white mr-3 ml-2 p-2">
+			<h1>Contact is not belongs to you so you can't take any action!</h1>
+		</div>
+	</section>
+
+</body>
+</html>

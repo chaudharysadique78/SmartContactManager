@@ -1,0 +1,134 @@
+body {
+	background: #e2e2e2 !important;
+}
+
+/* base.html-navbar */
+.bg-primary {
+	background: #009988 !important;
+}
+
+/* home.html section */
+.banner {
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)),
+		url(../img/banner.jpg);
+	background-size: cover;
+	color: white;
+}
+
+/* Signup.html section */
+.my-card {
+	padding: 10px;
+	background: white;
+	border-radius: 10px;
+}
+
+/* login.html section */
+#login .container #login-row #login-column #login-box {
+	margin-top: 120px;
+	max-width: 600px;
+	height: 390px;
+	border: 1px solid #9C9C9C;
+	background-color: white;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+	padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link
+	{
+	margin-top: -85px;
+}
+
+/* sidebar style norm/base.html */
+@media only screen and (max-width: 600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		height: 100vh;
+		background: white;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.content {
+		margin-left: 0% !important;
+	}
+}
+
+.sidebar {
+	width: 18%;
+	height: 100%;
+	background: white;
+	position: fixed;
+	padding-top: 50px;
+	z-index: 9999999999999999999999999999;
+}
+
+.sidebar a {
+	margin-top: 5px;
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+
+.sidebar a:hover {
+	background: #e2e2e2;
+}
+
+.sidebar .divider {
+	height: .5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+
+.content {
+	margin-left: 20%;
+	height: 100%;
+}
+
+.sidebar .crossbtn {
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+/* show_contact.html */
+.my_profile_img {
+	height: 35px;
+	width: 35px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.description {
+	text-align: center;
+}
+
+/* search css show_contact.html */
+.search-container {
+	position: relative;
+}
+
+.search-result {
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	background: white;
+	border: 1px solid gray;
+	display: none;
+}
+
+/* active link css normal/sbase.html  */
+.active {
+	background: #009988 !important;
+	color: white !important;
+}
+
+/* forgot_password.html css */
